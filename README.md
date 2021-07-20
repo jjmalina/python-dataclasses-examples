@@ -9,10 +9,10 @@ This repo contains some code to show off how to use Python's dataclasses.
 
 ## Resources
 
-https://docs.python.org/3/library/dataclasses.html
-https://www.youtube.com/watch?v=T-TwcmT6Rcw
-https://glyph.twistedmatrix.com/2016/08/attrs.html
-https://www.attrs.org/en/stable/overview.html
-https://fastapi.tiangolo.com/advanced/
-https://stackoverflow.com/questions/19464410/what-are-gadts
-https://github.com/gvanrossum/patma
+- https://docs.python.org/3/library/dataclasses.html
+- https://www.youtube.com/watch?v=T-TwcmT6Rcw
+- https://glyph.twistedmatrix.com/2016/08/attrs.html
+- https://www.attrs.org/en/stable/overview.html
+- https://fastapi.tiangolo.com/advanced/
+- https://stackoverflow.com/questions/19464410/what-are-gadts
+- https://github.com/gvanrossum/patma
