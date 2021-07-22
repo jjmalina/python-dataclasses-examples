@@ -45,12 +45,14 @@ PeopleSchema = marshmallow_dataclass.class_schema(PeopleModel)()
 Database
 """
 from flask_sqlalchemy import SQLAlchemy  # type: ignore
+from sqlalchemy.ext.declarative import DeclarativeMeta
 
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:////tmp/people.db"
 db = SQLAlchemy(app)
+BaseModel: DeclarativeMeta = db.Model
 
 
-class Person(db.Model):  # type: ignore
+class Person(BaseModel):  # type: ignore
     __tablename__ = "people"
     id = db.Column(db.String(32), primary_key=True, default=lambda: uuid4().hex)
     created_timestamp = db.Column(db.DateTime, nullable=True, default=lambda: datetime.utcnow())
@@ -98,8 +100,9 @@ Flask routes
 """
 from flask import request, jsonify
 from flask_apispec import marshal_with  # type: ignore
-from sqlalchemy.exc import IntegrityError  # type: ignore
-from marshmallow import ValidationError  # type: ignore
+from sqlalchemy.exc import IntegrityError
+from marshmallow import ValidationError
+
 
 @app.errorhandler(ValidationError)
 def handle_validation_error(e):
@@ -175,7 +178,6 @@ app.config.update({
     'APISPEC_SWAGGER_UI_URL': '/docs/',
 })
 docs = FlaskApiSpec(app)
-# Person gets double registered, need to fix
 docs.register(people)
 docs.register(person)
 docs.register(new_person)

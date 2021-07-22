@@ -49,7 +49,7 @@ SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
 
 
-class Person(Base):  # type: ignore
+class Person(Base):
     __tablename__ = 'people'
 
     id = Column(String(32), primary_key=True, index=True, default=lambda: uuid4().hex)
@@ -151,5 +151,5 @@ def delete_person(id: str, db: Session = Depends(get_db)):
 
 
 if __name__ == '__main__':
-    Base.metadata.create_all(bind=engine)  # type: ignore
+    Base.metadata.create_all(bind=engine)
     uvicorn.run(app, port=5000)  # type: ignore
