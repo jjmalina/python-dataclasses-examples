@@ -1,3 +1,4 @@
+aiosqlite==0.17.0
 apispec==4.7.1
 apispec-webframeworks==0.5.2
 dataclasses-json==0.5.4

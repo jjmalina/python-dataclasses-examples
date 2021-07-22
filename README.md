@@ -14,5 +14,8 @@ This repo contains some code to show off how to use Python's dataclasses.
 - https://glyph.twistedmatrix.com/2016/08/attrs.html
 - https://www.attrs.org/en/stable/overview.html
 - https://fastapi.tiangolo.com/advanced/
+- https://stribny.name/blog/fastapi-asyncalchemy/
+- https://docs.sqlalchemy.org/en/14/orm/extensions/asyncio.html
+- https://ahmed-nafies.medium.com/sqlalchemy-async-orm-is-finally-here-d560dfaa335d
 - https://stackoverflow.com/questions/19464410/what-are-gadts
 - https://github.com/gvanrossum/patma
