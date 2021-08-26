@@ -74,3 +74,7 @@ Comparing the two frameworks wasn't the main goal of this excercise but here are
 - async support in sqlalchemy and other database libraries is fairly new so it may not be GA quality yet (asyncio + SQLAlchemy is in beta)
 
 If I were to start a new API server project today I think I would go with FastAPI because of the better mypy integration and the clearer documentation. The performance is also a bonus. However I'd be a little cautious before going all-in on FastAPI because I don't have as much experience scaling an async Python server as I do using NGINX + uWSGI with Flask.
+
+## Further Reading
+
+- https://threeofwands.com/why-i-use-attrs-instead-of-pydantic/
